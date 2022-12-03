@@ -52,10 +52,10 @@ function parseLog() {
     }
 
     // show the output on the screen
-    document.getElementById("output").innerHTML = newLog.replace("\n", "<br />");
+    document.getElementById("output").innerHTML = '<h2>Output</h2>\n<code>' + newLog.replace("\n", "<br />") + '</code>';
 
     // show download button after parsing
-    document.getElementById("download-button-placeholder").innerHTML = '<button type="button" id="downloadButton">Download log file 💾</button>'
+    document.getElementById("download-button-placeholder").innerHTML = '<button type="button" id="downloadButton">💫 Download your fixed log file 💾</button>'
 
     // add download button functionality
     document.getElementById("downloadButton").addEventListener('click', download_txt);
