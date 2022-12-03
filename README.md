@@ -1,5 +1,9 @@
 # MTR date modifier tool
 
+## Live version
+
+👉 [](https://stalegjelsten.github.io/mtr-date-modifier) 👈
+
 This tool is made for orienteering organisers who use emit for time keeping and need to change the read timestamps of all emit cards in a log file.
 
 ## The problem
