@@ -12,49 +12,55 @@
 <body>
     <h1>Change MTR logfile timestamps</h1>
 
-    <table>
-        <tr>
-            <td>Days</td>
-            <td>
-                <input type="number" id="days" id="" placeholder="Any number" min="0" size="14">
-            </td>
-        </tr>
-        <tr>
-            <td>Hours</td>
-            <td>
-                <input type="number" id="hours" id="" placeholder="0–23" min="0" max="23" size="14">
-            </td>
-        <tr>
-            <td>Minutes</td>
-            <td>
-                <input type="number" id="minutes" placeholder="0–59" min="0" max=59 size="14">
-            </td>
-        </tr>
-        <tr>
-            <td>Seconds</td>
-            <td>
-                <input type="number" id="seconds" id="" placeholder="0–59" min=0 max=59 size="14">
-            </td>
-        </tr>
-        <tr>
-            <td>Add or subtract time</td>
-            <td>
-                <select id="addOrSubtract" id="">
-                    <option value="add">Add time</option>
-                    <option value="subtract">Subtract time</option>
-                </select>
-            </td>
-        </tr>
-    </table>
+    <div style="margin: auto;">
+        <table>
+            <tr>
+                <td>Days</td>
+                <td>
+                    <input type="number" id="days" id="" placeholder="Any number" min="0" size="14">
+                </td>
+            </tr>
+            <tr>
+                <td>Hours</td>
+                <td>
+                    <input type="number" id="hours" id="" placeholder="0–23" min="0" max="23" size="14">
+                </td>
+            <tr>
+                <td>Minutes</td>
+                <td>
+                    <input type="number" id="minutes" placeholder="0–59" min="0" max=59 size="14">
+                </td>
+            </tr>
+            <tr>
+                <td>Seconds</td>
+                <td>
+                    <input type="number" id="seconds" id="" placeholder="0–59" min=0 max=59 size="14">
+                </td>
+            </tr>
+            <tr>
+                <td>Add or subtract time</td>
+                <td>
+                    <select id="addOrSubtract" id="">
+                        <option value="add">Add time</option>
+                        <option value="subtract">Subtract time</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
     <br>
-    <textarea name="input_log" id="input_log" cols="100" rows="10"
-        placeholder="Paste logfile contents in this window"></textarea><br />
-    <button type="button" onclick="parseLog()">Do magic 🪄</button>
-    <br>
-    <p id="download-button-placeholder" width="100%">
-        <button type="button" id="downloadButton" hidden>Download log file 💾</button>
-        <!-- <button type="button" id="downloadButton">Download log file 💾</button> -->
-    </p>
+    <div>
+        <textarea name="input_log" id="input_log" cols="100" rows="10"
+            placeholder="Paste logfile contents in this window"></textarea>
+    </div>
+    <div>
+        <div style="text-align: center;">
+            <button type="button" onclick="parseLog()">Do magic 🪄</button>
+        </div>
+        <div id="download-button-placeholder" style="text-align: center;">
+            <button type="button" id="downloadButton" hidden>Download log file 💾</button>
+        </div>
+    </div>
     <p id="output"></p>
     <script src="mtr-modifier.js"></script>
 
@@ -62,7 +68,7 @@
             href="https://emit.no/en/">emit</a> for time keeping
         and need to change the read timestamps of all emit cards in a log file.</p>
 
-    <h4>The problem</h4>
+    <h2>The problem</h2>
     <p>
         When I organise orienteering events without a fixed start time for each competitor using emit and
         the <a href="https://emit.no/support-base/emit-mini-time-recorder-mtr4/">MTR4</a> for card readouts,
@@ -72,12 +78,12 @@
         times to determine when a participant punches each control.
     </p>
 
-
-    <h4>About this tool</h4>
+    <h2>About this tool</h2>
     <p>
         This tool can alter the timestamps of all read emit cards in a log file. Usually I generate the MTR log
         file using <a href="https://ttime.matthey.no/">tTime</a> and its MTR module.
     </p>
+    <footer>Ståle Gjelsten 2022 | <a href="https://github.com/stalegjelsten/mtr-date-modifier/">Github</a></footer>
 </body>
 
 </html>

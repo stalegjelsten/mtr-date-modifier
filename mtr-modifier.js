@@ -1,4 +1,5 @@
 let newLog = ""
+
 function getTimeDelta() {
     // calculates amount of milliseconds to add or subtract based on the input numbers
     let timedelta = document.getElementById("days").value * 24 * 60 * 60 * 1000 + document.getElementById("hours").value * 60 * 60 * 1000 + document.getElementById("minutes").value * 60 * 1000 + document.getElementById("seconds").value * 1000;
@@ -10,6 +11,7 @@ function getTimeDelta() {
 }
 
 function parseLog() {
+    newLog = ""
     const input = document.getElementById("input_log").value;
     let lines = input.split("\n");
 
