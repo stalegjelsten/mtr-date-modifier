@@ -37,3 +37,7 @@ From looking at a few different log files, the other columns are as follows
 7. Emit card number
 8. Columns 8–11 are empty. Columns 12–109 are control code and split time pairs (control code first, split time second)
 9. Column 110 ends with the message number
+
+## Licenses
+
+CSS stylesheet is [Simple.css curtesy of kevquirk](https://github.com/kevquirk/simple.css). This tool is provided under an MIT license.
